@@ -16,6 +16,10 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
+    path: 'firebase-app-check',
+    loadChildren: () => import('./modules/firebase-app-check/firebase-app-check.module').then( m => m.FirebaseAppCheckPageModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',

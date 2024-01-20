@@ -12,7 +12,12 @@ export class HomePage implements OnInit {
   public currentUser: User | null = null;
   public idToken = '';
   public languageCode = '';
-
+  public plugins = [
+    {
+      name: 'Firebase App Check',
+      url: '/firebase-app-check',
+    }
+  ];
   constructor(
     private readonly firebaseAuthenticationService: FirebaseAuthenticationService,
     private readonly dialogService: DialogService,
